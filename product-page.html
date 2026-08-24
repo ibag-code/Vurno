@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="product-page.css">
+
+    <script src="cart-page.js" defer></script>
+    <script src="product-page.js" defer></script>
+</head>
+<body>
+    
+    <header>
+        <div class="amazon-logo-div">
+            <img src="images/icons/amazon-logo-white.png" alt="amazon-logo" class="amazon-logo">
+        </div>
+
+        <div class="cart-and-search-input">
+
+            <div class="search-bar-and-input">
+                    <input type="text" placeholder="Search" class="input-field">
+
+                    <button class="search-bar-icon">
+                        <img src="images/icons/search-icon.png" alt="search icon" class="search-icon">
+                    </button>
+
+                </div>
+
+                <div class="cart-icon-number" onclick="location.href='cart-page.html'">
+                    <img src="images/icons/cart-icon.png" alt="cart icon" class="cart-icon">
+                    <p class="cart-number js-cart-number">0</p>
+            </div>
+
+        </div>
+
+
+    </header>
+
+    <main class="main-content-product js-product-grid">
+
+        
+    
+        <!-- <div class="product-image-content">
+
+            <div class="product-image-div">
+                <img src="images/product/athletic-cotton-socks-6-pairs.jpg" alt="productimage" class="product-image-div">
+            </div>
+
+            <div class="product-content">
+                <p class="product-name">Black and Gray Athletic Cotton Socks - 6 Pairs</p>
+
+                <div class="rating-added-cart">
+                    
+                    <div class="rating-and-count">
+                        <img src="images/ratings/Rating 4.5.svg" alt="rating4.5" class="rating-star">
+                        <p class="rating-count">87</p>
+                    </div>
+
+
+
+                    <div class="added-to-cart"> Added </div>
+                </div>
+
+
+                <div class="price-picker">
+                    <p class="pricing">$6.99</p>
+
+                    <select class="product-quantity">
+                        <img src="images/icons/dropsoun-Vector.svg" alt="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <button class="call-to-action"> Add to cart</button>
+        </div>
+
+        <div class="product-image-content">
+
+            <div class="product-image-div">
+                <img src="images/product/Basketball.jpg " alt="productimage" class="product-image-div">
+            </div>
+
+            <div class="product-content">
+                <p class="product-name">Adults Plain Cotton T-Shirt - 2 Pack</p>
+
+                <div class="rating-added-cart">
+                    
+                    <div class="rating-and-count">
+                        <img src="images/ratings/Rating 4.5.svg" alt="rating4.5" class="rating-star">
+                        <p class="rating-count">87</p>
+                    </div>
+
+
+
+                    <div class="added-to-cart"> Added </div>
+                </div>
+
+                <div class="price-picker">
+                    <p class="pricing">$12.99</p>
+
+                    <select class="product-quantity">
+                        <img src="images/icons/dropsoun-Vector.svg" alt="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="call-to-action"> Add to cart</button>
+        </div>
+
+        <div class="product-image-content">
+
+            <div class="product-image-div">
+                <img src="images/product/shirt.jpg" alt="productimage" class="product-image-div">
+            </div>
+
+            <div class="product-content">
+                <p class="product-name">2 Slot Toaster - Black</p>
+
+                <div class="rating-and-count">
+                    <img src="images/ratings/Rating 4.0.svg" alt="rating4.5" class="rating-star">
+                    <p class="rating-count">87</p>
+                </div>
+
+                <div class="price-picker">
+                    <p class="pricing">$63.99</p>
+
+                    <select class="product-quantity">
+                        <img src="images/icons/dropsoun-Vector.svg" alt="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="call-to-action"> Add to cart</button>
+        </div>
+
+        <div class="product-image-content">
+
+            <div class="product-image-div">
+                <img src="images/product/black-2-slot-toaster.jpg" alt="productimage" class="product-image-div">
+            </div>
+
+            <div class="product-content">
+                <p class="product-name">6 Piece White Dinner Plate Set</p>
+
+                <div class="rating-and-count">
+                    <img src="images/ratings/Rating 4.5.svg" alt="rating4.5" class="rating-star">
+                    <p class="rating-count">70</p>
+                </div>
+
+                <div class="price-picker">
+                    <p class="pricing">$6.99</p>
+
+                    <select class="product-quantity">
+                        <img src="images/icons/dropsoun-Vector.svg" alt="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="call-to-action"> Add to cart</button>
+        </div>
+
+        <div class="product-image-content">
+
+            <div class="product-image-div">
+                <img src="images/product/6-piece-white-dinner-plate-set.jpg" alt="productimage" class="product-image-div">
+            </div>
+
+            <div class="product-content">
+                <p class="product-name">6 Piece White Dinner Plate Set</p>
+
+                <div class="rating-and-count">
+                    <img src="images/ratings/Rating 4.5.svg" alt="rating4.5" class="rating-star">
+                    <p class="rating-count">87</p>
+                </div>
+
+                <div class="price-picker">
+                    <p class="pricing">$6.99</p>
+
+                    <select class="product-quantity">
+                        <img src="images/icons/dropsoun-Vector.svg" alt="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="call-to-action"> Add to cart</button>
+        </div>
+
+        <div class="product-image-content">
+
+            <div class="product-image-div">
+                <img src="images/product/6-piece-non-stick-baking-set.webp" alt="productimage" class="product-image-div">
+            </div>
+
+            <div class="product-content">
+                <p class="product-name">6-Piece Nonstick, Carbon Steel Oven Bakeware </p>
+
+                <div class="rating-and-count">
+                    <img src="images/ratings/Rating 4.5.svg" alt="rating4.5" class="rating-star">
+                    <p class="rating-count">87</p>
+                </div>
+
+                <div class="price-picker">
+                    <p class="pricing">$6.99</p>
+
+                    <select class="product-quantity">
+                        <img src="images/icons/dropsoun-Vector.svg" alt="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="call-to-action"> Add to cart</button>
+        </div>
+        
+        <div class="product-image-content">
+
+            <div class="product-image-div">
+                <img src="images/product/plain-hooded-fleece-sweatshirt-yellow.jpg" alt="productimage" class="product-image-div">
+            </div>
+
+            <div class="product-content">
+                <p class="product-name">Plain Hooded Fleece Sweatshirt</p>
+
+                <div class="rating-and-count">
+                    <img src="images/ratings/Rating 5.0.svg" alt="rating4.5" class="rating-star">
+                    <p class="rating-count">56</p>
+                </div>
+
+                <div class="price-picker">
+                    <p class="pricing">$6.99</p>
+
+                    <select class="product-quantity">
+                        <img src="images/icons/dropsoun-Vector.svg" alt="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="call-to-action"> Add to cart</button>
+        </div>
+
+        <div class="product-image-content">
+
+            <div class="product-image-div">
+                <img src="images/product/luxury-tower-set-6-piece.jpg" alt="productimage" class="product-image-div">
+            </div>
+
+            <div class="product-content">
+                <p class="product-name">Luxury Towel Set - Graphite Gray </p>
+
+                <div class="rating-and-count">
+                    <img src="images/ratings/Rating 5.0.svg" alt="rating4.5" class="rating-star">
+                    <p class="rating-count">120</p>
+                </div>
+
+                <div class="price-picker">
+                    <p class="pricing">$10.99</p>
+
+                    <select class="product-quantity">
+                        <img src="images/icons/dropsoun-Vector.svg" alt="">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="call-to-action"> Add to cart</button>
+        </div> -->
+        
+    </main>
+
+
+</body>
+</html>
