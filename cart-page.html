@@ -8,46 +8,42 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="product-page.css">
+
 <link rel="stylesheet" href="cart-page.css">
+
+<link rel="stylesheet" href="https://cdn.hugeicons.com/font/hgi-stroke-rounded.css" />
+
 
 </head>
 <body>
 
 
-    <header>
-        <div class="amazon-logo-div">
-            <img src="images/product/Vurno-logo.png">
+    <header class="main">
+
+
+        <div class="vurno-logo">
+            <img src="images/product/Vurno-logo.png" class="vurno-logo">
             <a href="product-page.html"></a>
-        </div>
-
-        <div class="cart-and-search-input">
-
-            <div class="search-bar-and-input">
-                    <input type="text" placeholder="Search" class="input-field">
-
-                    <button class="search-bar-icon">
-                        <img src="images/icons/search-icon.png" alt="search icon" class="search-icon">
-                    </button>
-
-                </div>
-
-                <div class="cart-icon-number" onclick="location.href='cart-page.html'">
-                    <img src="images/icons/cart-icon.png" alt="cart icon" class="cart-icon">
-                    <p class="cart-number js-cart-number">0</p>
-            </div>
-
         </div>
 
 
     </header>
 
-    <div>
+    <div class="back-checkout">
         <div>
             <i class="hgi hgi-stroke hgi-rounded hgi-arrow-left-01"></i>
         </div>
 
         <h3>Checkout <span>(2 item)</span></h3>
+
+        <h3 class="dont-display">Checkout <span>(2 item)</span></h3>
     </div>
+
+
 
     <div class="main-body-content">
 
@@ -57,14 +53,14 @@
             <!-- product 1 -->
             <div class="product-image-cotent">
 
-                <div>
-                    <img src="images/product/athletic-cotton-socks-6-pairs.jpg" alt="">
+                <div class="product-image">
+                    <img src="images/product/athletic-cotton-socks-6-pairs.jpg" alt="" class="product-image">
                 </div>
 
                 <div class="all-content">
 
                     <div class="delivery-price-quantity">
-                        <p>Delivery date: Monday, May 8</p>
+                        <p class="tender-date">Delivery date: Monday, May 8</p>
 
                         <h5>Black and Gray Athletic Cotton Socks - 6 Pairs</h5>
 
@@ -76,15 +72,16 @@
 
                     <div class="cancel-delivery-option">
 
+
                         <div class="cancel-icon">
                             <i class="hgi hgi-stroke hgi-rounded hgi-cancel-01"></i>
                         </div>
 
 
+
                         <div class="delivery-option-and-header">
 
                             <p>Choose Delivery Option:</p>
-
 
                             <div class="delivery-options">
 
@@ -93,7 +90,7 @@
                                     <input type="radio" name="delivery" checked />
 
                                     <div class="delivery-info">
-                                    <h2>Monday, May 8</h2>
+                                    <h5>Monday, May 8</h5>
                                     <p>Free Shipping</p>
                                     </div>
                                 </label>
@@ -104,7 +101,7 @@
                                     <input type="radio" name="delivery" />
 
                                     <div class="delivery-info">
-                                    <h2>Tuesday, May 2</h2>
+                                    <h5>Tuesday, May 2</h5>
                                     <p>$4.99 - Shipping</p>
                                     </div>
                                 </label>
@@ -115,7 +112,7 @@
                                     <input type="radio" name="delivery" />
 
                                     <div class="delivery-info">
-                                    <h2>Friday, April 28</h2>
+                                    <h5>Friday, April 28</h5>
                                     <p>$9.99 - Shipping</p>
                                     </div>
                                 </label>
@@ -134,14 +131,14 @@
             <!-- product 2 -->
             <div class="product-image-cotent">
 
-                <div>
-                    <img src="images/product/6-piece-non-stick-baking-set.webp" alt="">
+                <div class="product-image">
+                    <img src="images/product/6-piece-non-stick-baking-set.webp" alt="" class="product-image">
                 </div>
 
                 <div class="all-content">
 
                     <div class="delivery-price-quantity">
-                        <p>Delivery date: Monday, May 8</p>
+                        <p class="tender-date">Delivery date: Monday, May 8</p>
 
                         <h5>6-Piece Non-Stick, Carbon Steal Oven Bakeware</h5>
 
@@ -153,15 +150,16 @@
 
                     <div class="cancel-delivery-option">
 
+
                         <div class="cancel-icon">
                             <i class="hgi hgi-stroke hgi-rounded hgi-cancel-01"></i>
                         </div>
 
+                        
 
                         <div class="delivery-option-and-header">
 
                             <p>Choose Delivery Option:</p>
-
 
                             <div class="delivery-options">
 
@@ -170,7 +168,7 @@
                                     <input type="radio" name="delivery" checked />
 
                                     <div class="delivery-info">
-                                    <h2>Monday, May 8</h2>
+                                    <h5>Monday, May 8</h5>
                                     <p>Free Shipping</p>
                                     </div>
                                 </label>
@@ -181,7 +179,7 @@
                                     <input type="radio" name="delivery" />
 
                                     <div class="delivery-info">
-                                    <h2>Tuesday, May 2</h2>
+                                    <h5>Tuesday, May 2</h5>
                                     <p>$4.99 - Shipping</p>
                                     </div>
                                 </label>
@@ -192,7 +190,7 @@
                                     <input type="radio" name="delivery" />
 
                                     <div class="delivery-info">
-                                    <h2>Friday, April 28</h2>
+                                    <h5>Friday, April 28</h5>
                                     <p>$9.99 - Shipping</p>
                                     </div>
                                 </label>
@@ -204,20 +202,21 @@
                     </div>
 
 
+
                 </div>
             </div>
 
             <!-- product 3 -->
             <div class="product-image-cotent">
 
-                <div>
-                    <img src="images/product/black-2-slot-toaster.jpg" alt="">
+                <div class="product-image">
+                    <img src="images/product/black-2-slot-toaster.jpg" alt="" class="product-image">
                 </div>
 
                 <div class="all-content">
 
                     <div class="delivery-price-quantity">
-                        <p>Delivery date: Monday, May 8</p>
+                        <p class="tender-date">Delivery date: Monday, May 8</p>
 
                         <h5>2 slot Toaster - Black</h5>
 
@@ -229,15 +228,16 @@
 
                     <div class="cancel-delivery-option">
 
+
                         <div class="cancel-icon">
                             <i class="hgi hgi-stroke hgi-rounded hgi-cancel-01"></i>
                         </div>
 
+                        
 
                         <div class="delivery-option-and-header">
 
                             <p>Choose Delivery Option:</p>
-
 
                             <div class="delivery-options">
 
@@ -246,7 +246,7 @@
                                     <input type="radio" name="delivery" checked />
 
                                     <div class="delivery-info">
-                                    <h2>Monday, May 8</h2>
+                                    <h5>Monday, May 8</h5>
                                     <p>Free Shipping</p>
                                     </div>
                                 </label>
@@ -257,7 +257,7 @@
                                     <input type="radio" name="delivery" />
 
                                     <div class="delivery-info">
-                                    <h2>Tuesday, May 2</h2>
+                                    <h5>Tuesday, May 2</h5>
                                     <p>$4.99 - Shipping</p>
                                     </div>
                                 </label>
@@ -268,7 +268,7 @@
                                     <input type="radio" name="delivery" />
 
                                     <div class="delivery-info">
-                                    <h2>Friday, April 28</h2>
+                                    <h5>Friday, April 28</h5>
                                     <p>$9.99 - Shipping</p>
                                     </div>
                                 </label>
@@ -280,20 +280,21 @@
                     </div>
 
 
+
                 </div>
             </div>
 
             <!-- product 4 -->
             <div class="product-image-cotent">
 
-                <div>
-                    <img src="images/product/adults-plain-cotton-tshirt-2-pack-teal.jpg" alt="">
+                <div class="product-image">
+                    <img src="images/product/adults-plain-cotton-tshirt-2-pack-teal.jpg" alt="" class="product-image">
                 </div>
 
                 <div class="all-content">
 
                     <div class="delivery-price-quantity">
-                        <p>Delivery date: Monday, May 8</p>
+                        <p class="tender-date">Delivery date: Monday, May 8</p>
 
                         <h5>Adult Plain Cotton T-shirt </h5>
 
@@ -305,15 +306,16 @@
 
                     <div class="cancel-delivery-option">
 
+
                         <div class="cancel-icon">
                             <i class="hgi hgi-stroke hgi-rounded hgi-cancel-01"></i>
                         </div>
 
+                        
 
                         <div class="delivery-option-and-header">
 
                             <p>Choose Delivery Option:</p>
-
 
                             <div class="delivery-options">
 
@@ -322,7 +324,7 @@
                                     <input type="radio" name="delivery" checked />
 
                                     <div class="delivery-info">
-                                    <h2>Monday, May 8</h2>
+                                    <h5>Monday, May 8</h5>
                                     <p>Free Shipping</p>
                                     </div>
                                 </label>
@@ -333,7 +335,7 @@
                                     <input type="radio" name="delivery" />
 
                                     <div class="delivery-info">
-                                    <h2>Tuesday, May 2</h2>
+                                    <h5>Tuesday, May 2</h5>
                                     <p>$4.99 - Shipping</p>
                                     </div>
                                 </label>
@@ -344,7 +346,7 @@
                                     <input type="radio" name="delivery" />
 
                                     <div class="delivery-info">
-                                    <h2>Friday, April 28</h2>
+                                    <h5>Friday, April 28</h5>
                                     <p>$9.99 - Shipping</p>
                                     </div>
                                 </label>
@@ -356,6 +358,7 @@
                     </div>
 
 
+
                 </div>
             </div>
 
@@ -364,7 +367,7 @@
         <div class="order-summary">
 
 
-            <h3> Order Summary </h3>
+            <h3 class="summary-title"> Order Summary </h3>
 
             <div>
                 <p>Item (0):</p>
@@ -407,7 +410,7 @@
             </div>
 
 
-            <button> Place Order</button>
+            <button class="order-btn"> Place Order</button>
 
     </div>
 

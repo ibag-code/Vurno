@@ -1,7 +1,12 @@
 body {
     display: flex;
     flex-direction: column;
-    
+    gap: 20px;
+    background-color: #EFEFEF;
+}
+
+:root {
+    --header-colour: #111922;
 }
 
 * {
@@ -9,334 +14,303 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+
 header {
-    background-color: #111922;
+ display: flex;
+ flex-direction: row;
+ justify-content: flex-start;
+ align-items: center;
+ width: 100%;
+ height: 80px;
+ background-color: var(--header-colour);
+ position: fixed;
+ padding: 10px 78px;
+ overflow: hidden;
+}
+
+.vurno-logo {
     display: flex;
     flex-direction: row;
+    height: 80px;
+    width: 80px;
+}
+
+.back-checkout {
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    width: 100%;    
     height: fit-content;
-    width: 100%;
+    padding: 0px 78px;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 200px;
-    overflow: hidden;
-    position: fixed;
-}
-A
-.logo-wrapper-link{
-    width: 130px;
-    height: 40px;
+
 }
 
-.logo-image {
-    width: 130px;
-    height: 40px;
-}
-
-
-
-.content-body{
-    width: 100%;
-    background-color: #EFEFEF;
-    padding: 100px 200px;
-    height: fit-content;
+.back-checkout div {
     display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.tittle-page-and-shop-button {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    vertical-align: middle;
-}
-
-
-.tittle-page {
-    font-family: Geist;
-    font-size: 32px;
-    font-weight: 700;
-}
-
-.shopping-button {
-    border: 1px solid grey;
-    font-family: Geist;
-    font-size: 16px;
-    color: #333333;
-    padding: 14px 20px;
-    border-radius: 999px;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.shopping-button:hover {
-    background-color: #dedede;
-}
-
-.product-cart-and-order-summary {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-
-.product-cart-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    width: 100%;
-}
-
-.product-cart{
-    background-color: white;
-    border-radius: 24px;
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    gap: 20px;
-    height: 270px;
-}
-
-.product-cart-image {
-    width: 250px;
-    height: 250px;
-    object-fit: contain;
-}
-
-.product-cart-content {
-    display: flex;
-    flex-direction: column;
-    padding: 12px;
-    width: 100%;
-    height: 100%;
-    justify-content: space-between;
-    align-self: stretch;
-
-}
-
-.product-name-and-others {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    width: 100%;
-    height: fit-content;
-    margin: 0px;
-}
-
-.cart-product-tittle-and-delete {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.cart-product-tittle{
-    font-family: Geist;
-    font-size: 18px;
-    font-weight: 400;
-    width: 320px;
-}
-
-.cart-delete {
-    width: 40px;
-    height: 40px;
-    border-radius: 40px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+    background-color: #E5E5E5;
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
     justify-content: center;
-    border: none;
+    align-items: center;
 }
 
-.cart-delete-icon {
-    width: 8px;
-    height: 8px;
+.back-checkout div i {
+    font-size: 28px;
+    font-weight: 500;
+
 }
 
-.cart-product-price {
-    font-family: Geist;
-    font-size: 24px;
-    font-weight: bold;
-    color: #3700c2;
+.back-checkout div:hover{
+    background-color: black;
+    color: white;
 }
 
-.cart-delivery-date-and-calender {
+
+.dont-display {
+    opacity: 0;
+}
+
+.main-body-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    padding: 0px 78px;
+}
+
+.all-product {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.product-image-cotent {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    justify-content: center;
-    align-items: center;
-    width: fit-content;
-    cursor: pointer;
+    background-color: white;
+    border-radius: 12px;
+    width: 60vw;
+    padding: 10px;
 }
 
-.delivery-date-text {
-    font-family: Geist;
-    font-size: 14px;
-    font-weight: regular;
-    color: #333333;
+
+.product-image {
+    display: flex;
+    height: 250px;
+    width: 280px;
+
 }
 
-.calender {
-    font-family: Geist;
-    font-size: 12px;
+.all-content {
     display: flex;
     flex-direction: row;
-    padding: 8px 12px;
-    background-color: #e5e5e5;
-    border: none;
-    border-radius: 99px;
-    cursor: pointer;
-}
-
-.deliverydate-and-cart-increament {
-    display: flex;
-    flex-direction: row;
+    width: 100%;
     justify-content: space-between;
-    align-items: center;
+    padding: 12px;
 }
 
-.delivery-date-and-type {
+.delivery-price-quantity {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    gap: 12px;
+    width: 300px;
 }
 
-.shipping-day {
-    font-family: Geist;
-    font-size: 14px;
+.delivery-price-quantity .tender-date {
+    font-family: "Geist";
+    font-size: 16px;
+    color: #3700C2;
     font-weight: 500;
-    color: #007600;
 }
-
-.shipping-condition {
-    font-family: Geist;
-    font-size: 14px;
+.delivery-price-quantity h5 {
+    font-family: "Geist";
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--header-colour);
+}
+.delivery-price-quantity h1 {
+    font-family: "Geist";
+    font-size: 32px;
+    font-weight: 700;
+}
+.delivery-price-quantity p {
+    font-family: "Geist";
+    font-size: 18px;
     font-weight: 400;
-    color: #333333;
 }
 
-.counter {
-    background-color: #e5e5e5;
-    padding: 8px 12px;
-    border-radius: 20px;
+
+.cancel-delivery-option {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: end;
+}
+
+
+.cancel-icon {
     display: flex;
-    flex-direction: row;
-    gap: 14px;
+    background-color: #E5E5E5;
+    height: 40px;
+    width: 40px;
+    border-radius: 30px;
     justify-content: center;
     align-items: center;
-}
-
-.count-button {
-    border: none;
-    width: 24px;
-    height: 24px;
-    font-size: 16px;
-    border-radius: 999px;
-    background-color: #e5e5e5;
     cursor: pointer;
 }
 
-.count-button:hover {
-    background-color: #d4d2d2;
-
+.cancel-icon i {
+    font-size: 20px;
+    font-weight: 500;
 
 }
 
-.count {
-    font-family: Geist;
-    font-size: 14px;
+.cancel-icon:hover{
+    background-color: black;
+    color: white;
+}
+
+.delivery-option-and-header {
+    display: flex;
+     gap: 12px;
+    flex-direction: column;
+}
+.delivery-option-and-header p {
+    font-family: "Geist";
+    font-size: 16px;
+    font-weight: 600;
+   
+
+}
+
+.delivery-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.delivery-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.delivery-option {
+  display: flex;
+  align-items: top;
+  gap: 12px;
+  cursor: pointer;
+}
+
+
+/* Radio button */
+
+.delivery-option input {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #d5d5d5;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+}
+
+/* Small circle inside */
+
+.delivery-option input::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.2s;
+}
+
+.delivery-option input:checked {
+  border-color: green;
+}
+
+.delivery-option input:checked::before {
+  background-color: green;
+  transform: scale(1);
+}
+
+
+/* Delivery text */
+
+.delivery-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  height: fit-content;
+}
+
+
+.delivery-info h5 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.delivery-info p {
+  font-size: 12px;
+  font-weight: 400;
+  color: #6D6D6D;
+}
+
+
+/* Making selected text green */
+.delivery-option:has(input:checked) h5 {
+  color: green;
 }
 
 .order-summary {
-    width: 800px;
-    height: fit-content;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
     background-color: white;
+    padding: 20px;
+    gap: 24px;
     border-radius: 24px;
-    gap: 20px;
-    display: flex;
-    flex-direction: column;
+    width: 450px;
+    height: fit-content;
 }
-
-.order-summary-text {
-    font-family: Geist;
-    font-size: 24px;
-    font-weight: 700;
+.order-summary div {
     display: flex;
     flex-direction: row;
+    gap: 24px;
+    border-radius: 24px;
     width: 100%;
-}
-
-.summary-figure, .order-total-wrapper {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+    height: fit-content;
     justify-content: space-between;
-    align-items: center;
-    font-family: Geist;
-    font-size: 18px;
-    font-weight: 300;
-    font-size: 18px;
 }
-
-.horizontal-line {
-    background-color: #CECECE ;
-}
-
-.summa, .summa-text {
+.order-summary .Total h3 {
+    color: #3700C2;
+    font-family: "Geist";
     font-size: 20px;
-    font-weight: 700;
-    color: #3700c2;
 }
 
-.placing-order-button{
-    background-color: #ffd815;
+.summary-title {
+    font-family: "Geist";
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.order-btn {
+    display: flex;
     padding: 14px 0px;
-    display: flex;
-    flex-direction: column;
     border: none;
-    font-family: Geist;
+    color: var(--header-colour);
     font-size: 16px;
-    border-radius: 99px;
-    width: 100%;
-    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFD815;
+    border-radius: 20px;
 }
-
-.placing-order-button:hover {
-    background-color: hsl(50, 80%, 54%);
-
-}
-
-.placing-order-button:active {
-    background-color: hsl(50, 89%, 74%);
-
-}
-
-.short-hr {
-    width: 40%;
-    margin-left: auto;
-    margin-right: 0;
-}
-
-.long-hr {
-    width: 100%;
-}
-
-.summary-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-
-
-
-
-
-
-
 
 
 
