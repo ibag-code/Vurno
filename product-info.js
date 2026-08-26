@@ -58,7 +58,7 @@
         stars: '4.5',
         ratingNumber: 87
     },
-    pricing: "699",
+    pricing: "9699",
 },
 {
     id: "dd82ca78-a18b-4e2a-9250-31e67412f98d",

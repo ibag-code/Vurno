@@ -40,7 +40,7 @@ cart.forEach((cartsItem) => {
 
                         <h5>${productCorrelation.productName}</h5>
 
-                        <h1>$${productCorrelation.pricing/100 }</h1>
+                        <h1>$${(productCorrelation.pricing/100).toFixed(2)}</h1>
 
                         <p>Quantity <span>${cartsItem.quantity}</span></p>
                     </div>
@@ -63,7 +63,7 @@ cart.forEach((cartsItem) => {
 
                                 <!-- Option 1 -->
                                 <label class="delivery-option">
-                                    <input type="radio" name="delivery" checked />
+                                    <input type="radio" name="delivery-${productCorrelation.id}" checked />
 
                                     <div class="delivery-info">
                                     <h5>Monday, May 8</h5>
@@ -74,7 +74,7 @@ cart.forEach((cartsItem) => {
 
                                 <!-- Option 2 -->
                                 <label class="delivery-option">
-                                    <input type="radio" name="delivery" />
+                                    <input type="radio" name="delivery-${productCorrelation.id}" />
 
                                     <div class="delivery-info">
                                     <h5>Tuesday, May 2</h5>
@@ -85,7 +85,7 @@ cart.forEach((cartsItem) => {
 
                                 <!-- Option 3 -->
                                 <label class="delivery-option">
-                                    <input type="radio" name="delivery" />
+                                    <input type="radio" name="delivery-${productCorrelation.id}" />
 
                                     <div class="delivery-info">
                                     <h5>Friday, April 28</h5>
@@ -121,5 +121,5 @@ document.querySelector('.all-product').innerHTML = checkOutHtml;
 const deleteButton = document.querySelector('.cancel-icon');
 
 deleteButton. addEventListener("click", () => {
-    
+    deleteButton.filter()
 })
