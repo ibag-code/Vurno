@@ -2,6 +2,9 @@ import {cart} from './cart-page.js';
 import {productInfo} from './product-info.js'
 
 
+
+
+
 //COMBINING ALL HTML  Or Viewer
 let productHTMl = '';
 
@@ -71,6 +74,29 @@ document.querySelector('.js-product-grid').innerHTML = productHTMl;
 
 
 
+function productTaker (dataproductId, selectedItem) {
+let itemMatching;
+
+cart.forEach((item) => {
+    //checking if a product is already in a cart
+    if(dataproductId === item.productsId){
+        itemMatching = item;
+    }   
+});
+    //if it is in the cart increase the quantity
+    if (itemMatching) {
+        itemMatching.quantity += selectedItem;
+
+        //if it is not in the cart add to the cart
+    } else {
+
+        cart.push({
+            productId: dataproductId,
+            quantity: selectedItem,
+        })
+    }
+}
+
 
 // The call to action button Or Controller
 let ctaBtn = document.querySelectorAll('.js-cta');
@@ -84,7 +110,6 @@ ctaBtn.forEach((button) => {
 
         //dataset gives us all the data attached to the CTA button
         const dataproductId = button.dataset.productsId;
-
  
         const productCard = button.closest('.product-image-content');
         const dropdown = productCard.querySelector('.product-quantity');
@@ -102,27 +127,9 @@ ctaBtn.forEach((button) => {
  
 
 
+        //take product and add it to the cart
+        productTaker(dataproductId, selectedItem)
 
-        let itemMatching;
-
-        cart.forEach((item) => {
-            //checking if a product is already in a cart
-            if(dataproductId === item.productsId){
-                itemMatching = item;
-            }   
-        });
-            //if it is in the cart increase the quantity
-            if (itemMatching) {
-                itemMatching.quantity += selectedItem;
-
-                //if it is not in the cart add to the cart
-            } else {
-
-                cart.push({
-                    productId: dataproductId,
-                    quantity: selectedItem,
-                })
-            }
 
             //calculating the total Quantity
             let quantityCart = 0;

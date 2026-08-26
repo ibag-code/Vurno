@@ -256,12 +256,14 @@ header {
 .delivery-info h5 {
   font-size: 16px;
   font-weight: 500;
+  font-family: "Geist";
 }
 
 .delivery-info p {
   font-size: 12px;
   font-weight: 400;
   color: #6D6D6D;
+  font-family: "Geist";
 }
 
 
@@ -289,6 +291,12 @@ header {
     height: fit-content;
     justify-content: space-between;
 }
+.order-summary div p{
+    font-family: "Geist";
+    font-size: 18px;
+    font-weight: 400;
+}
+
 .order-summary .Total h3 {
     color: #3700C2;
     font-family: "Geist";
