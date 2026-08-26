@@ -3,7 +3,7 @@
 // alert("MY brr you just have to get ur shit 2geda")
 // }, 2000)
 
-import {cart} from './cart-page.js';
+import {cart, cartRemover} from './cart-page.js';
 import {productInfo} from './product-info.js' 
 
 
@@ -27,7 +27,8 @@ cart.forEach((cartsItem) => {
     // console.log (productCorrelation)
 
 
-    let html = `<div class="product-image-cotent">
+    let html = `<div class=" product-image-cotent
+    js-product-image-cotent-${productCorrelation.id}">
 
                 <div class="product-image">
                     <img src="${productCorrelation.image}" alt="" class="product-image">
@@ -49,7 +50,7 @@ cart.forEach((cartsItem) => {
                     <div class="cancel-delivery-option">
 
 
-                        <div class="cancel-icon">
+                        <div class="cancel-icon" data-delete-item = ${productCorrelation.id}>
                             <i class="hgi hgi-stroke hgi-rounded hgi-cancel-01"></i>
                         </div>
 
@@ -118,8 +119,24 @@ document.querySelector('.all-product').innerHTML = checkOutHtml;
 
 //Cancel btn 
 
-const deleteButton = document.querySelector('.cancel-icon');
+const deleteButton = document.querySelectorAll('.cancel-icon');
 
-deleteButton. addEventListener("click", () => {
-    deleteButton.filter()
+deleteButton.forEach((deleteBtn) => {
+    deleteBtn.addEventListener('click', () => {
+        
+        //  alert("I will detete it now")
+
+        const attachId = deleteBtn.dataset.deleteItem
+
+        cartRemover(attachId)
+        // alert(cart)
+        // alert(attachId)
+
+        const theContainer = document.querySelector(`.js-product-image-cotent-${attachId}`)
+
+        // console.log (theContainer)
+
+        theContainer.remove()
+
+    })
 })
