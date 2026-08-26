@@ -1,4 +1,4 @@
-import {cart} from './cart-page.js';
+import {cart, productTaker} from './cart-page.js';
 import {productInfo} from './product-info.js'
 
 
@@ -74,28 +74,7 @@ document.querySelector('.js-product-grid').innerHTML = productHTMl;
 
 
 
-function productTaker (dataproductId, selectedItem) {
-let itemMatching;
 
-cart.forEach((item) => {
-    //checking if a product is already in a cart
-    if(dataproductId === item.productsId){
-        itemMatching = item;
-    }   
-});
-    //if it is in the cart increase the quantity
-    if (itemMatching) {
-        itemMatching.quantity += selectedItem;
-
-        //if it is not in the cart add to the cart
-    } else {
-
-        cart.push({
-            productId: dataproductId,
-            quantity: selectedItem,
-        })
-    }
-}
 
 
 // The call to action button Or Controller
