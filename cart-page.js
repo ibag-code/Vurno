@@ -25,7 +25,7 @@ if (!cart) {
 
 
 
-function vurnoStorage () {
+export function vurnoStorage () {
     localStorage.setItem("Ecom-Storage", JSON.stringify(cart))
 }
 

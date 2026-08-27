@@ -142,15 +142,15 @@ deleteButton.forEach((deleteBtn) => {
 })
 
 
-            function checkedCount() {
-            let checkCounting = 0;
+    function checkedCount() {
+        let checkCounting = 0;
 
-            cart.forEach((checkout) => {
-                checkCounting += checkout.quantity;
-            });
+        cart.forEach((checkout) => {
+            checkCounting += checkout.quantity;
+        });
 
-            document.querySelector(".checkout").innerHTML = checkCounting;
+        document.querySelector(".checkout").innerHTML = checkCounting;
 
-            }
+        }
 
-            checkedCount();
+        checkedCount();

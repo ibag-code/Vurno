@@ -1,6 +1,5 @@
-import {cart, productTaker} from './cart-page.js';
+import {cart, productTaker,vurnoStorage} from './cart-page.js';
 import {productInfo} from './product-info.js'
-
 
 
 
@@ -72,6 +71,8 @@ productInfo.forEach((product) => {
 // Linking the generrated HTML in js back to javasript 
 document.querySelector('.js-product-grid').innerHTML = productHTMl;
 
+vurnoStorage ()
+
 
 
 
@@ -119,7 +120,10 @@ ctaBtn.forEach((button) => {
 
             document.querySelector('.js-cart-number').innerHTML = quantityCart;
     })
+
 });
+
+
 
 
 
