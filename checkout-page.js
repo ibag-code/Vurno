@@ -137,6 +137,20 @@ deleteButton.forEach((deleteBtn) => {
         // console.log (theContainer)
 
         theContainer.remove()
-
+        checkedCount()
     })
 })
+
+
+            function checkedCount() {
+            let checkCounting = 0;
+
+            cart.forEach((checkout) => {
+                checkCounting += checkout.quantity;
+            });
+
+            document.querySelector(".checkout").innerHTML = checkCounting;
+
+            }
+
+            checkedCount();
