@@ -95,7 +95,7 @@ ctaBtn.forEach((button) => {
         const selectedItem = Number(dropdown.value);
         const addText = productCard.querySelector('.added-to-cart');
 
-        console.log(dropdown)
+        // console.log(dropdown)
 
 
         addText.classList.add('visible');
@@ -120,5 +120,6 @@ ctaBtn.forEach((button) => {
             document.querySelector('.js-cart-number').innerHTML = quantityCart;
     })
 });
+
 
 

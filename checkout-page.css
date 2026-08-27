@@ -81,6 +81,9 @@ header {
     color: white;
 }
 
+.checkout {
+    margin: 0px 6px;
+}
 
 .dont-display {
     opacity: 0;
