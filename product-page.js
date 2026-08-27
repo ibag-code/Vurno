@@ -59,7 +59,7 @@ productInfo.forEach((product) => {
                 </div>
 
             </div>
-                <button class="call-to-action js-cta" data-products-name ="${product.id}"> 
+                <button class="call-to-action js-cta" data-products-id ="${product.id}"> 
                 Add to cart</button>
         </div>`
 

@@ -108,7 +108,7 @@ cart.forEach((cartsItem) => {
             checkOutHtml = checkOutHtml + html;
 })
 
-console.log (checkOutHtml)
+// console.log (checkOutHtml)
 
 document.querySelector('.all-product').innerHTML = checkOutHtml;
 
