@@ -5,7 +5,13 @@
 
 import {cart, cartRemover} from './cart-page.js';
 import {productInfo} from './product-info.js' 
+import dayjs from "https://unpkg.com/supersimpledev@8.5.0/dayjs/esm/index.js";
 
+
+const today = dayjs()
+const deliveryDay = today.add(7, 'days')
+
+deliveryDay.format('dddd, MMMM D')
 
 let checkOutHtml = ""
 
