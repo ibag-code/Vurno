@@ -91,6 +91,9 @@ document.querySelector('.all-product').innerHTML = checkOutHtml;
 
 
 
+
+
+
 //Delivery Option FrameWork Generation
 
 function deliveryOptionHtml(productCorrelation, cartsItem) {
@@ -120,6 +123,7 @@ function deliveryOptionHtml(productCorrelation, cartsItem) {
 
 
 
+        //checked
         let checked = '';
 
         if (deliver.id === cartsItem.deliveryOption) {
