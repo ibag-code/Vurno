@@ -81,7 +81,6 @@ vurnoStorage ()
 let ctaBtn = document.querySelectorAll('.js-cta');
 
 
-
 ctaBtn.forEach((button) => {
 
     //"When this specific button is clicked, run the following code"    
@@ -90,6 +89,7 @@ ctaBtn.forEach((button) => {
         //dataset gives us all the data attached to the CTA button
         const dataproductId = button.dataset.productsId;
  
+        
         const productCard = button.closest('.product-image-content');
         const dropdown = productCard.querySelector('.product-quantity');
         const selectedItem = Number(dropdown.value);

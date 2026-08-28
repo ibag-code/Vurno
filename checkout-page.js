@@ -29,7 +29,7 @@ cart.forEach((cartsItem) => {
     //Getting full product info with ID
     let productId = cartsItem.productId;
 
-    let productCorrelation = '';
+    let productCorrelation = '';  //variable that act as a model for the cheackout html framework
 
     productInfo.forEach((productInformation)=>{
 
@@ -38,7 +38,35 @@ cart.forEach((cartsItem) => {
         }
     })
 
-    // console.log (productCorrelation)
+
+
+
+    // Finding the selected delivery option
+    let  selectedDeliveryOption;
+
+    deliveryOption.forEach((option) => {
+
+        if (option.id === cartsItem.deliveryOption) {
+            selectedDeliveryOption = option;
+        }
+
+    });
+
+
+    // Calculating its delivery date
+    let today = dayjs();
+
+    const deliveryDay = today.add(
+        selectedDeliveryOption.deliveryday,
+        "days"
+    );
+
+    const selectedDate =
+        deliveryDay.format("dddd, MMMM D");
+         
+    
+
+
 
 
 let html = `<div class=" product-image-cotent
@@ -51,7 +79,7 @@ js-product-image-cotent-${productCorrelation.id}">
             <div class="all-content">
 
                 <div class="delivery-price-quantity">
-                    <p class="tender-date">Delivery date: Monday, May 8</p>
+                    <p class="tender-date">Delivery date: ${selectedDate}</p>
 
                     <h5>${productCorrelation.productName}</h5>
 
@@ -123,21 +151,24 @@ function deliveryOptionHtml(productCorrelation, cartsItem) {
 
 
 
-        //checked
-        let checked = '';
+        // //checked
+        // let checked = '';
 
-        if (deliver.id === cartsItem.deliveryOption) {
-            checked = 'checked'
-        } else{
-            checked = ''
-        }
+        // if (deliver.id === cartsItem.deliveryOption) {
+        //     checked = 'checked'
+        // } else{
+        //     checked = ''
+        // }
+
+        const isChecked = deliver.id === cartsItem.deliveryOption;
 
 
-        const html = `
+        let html = `
             <label class="delivery-option">
 
                 <input 
-                    ${checked}  type="radio"
+                    ${isChecked  ?  'checked' :  ""}
+                    type="radio"
                     name="delivery-${productCorrelation.id}"
                 />
 
@@ -148,7 +179,6 @@ function deliveryOptionHtml(productCorrelation, cartsItem) {
 
             </label>
         `;
-
 
         deliverOptionHtml = deliverOptionHtml + html;
     });

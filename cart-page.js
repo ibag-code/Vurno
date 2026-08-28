@@ -1,5 +1,7 @@
-export let  cart = JSON.parse(localStorage.getItem("EcomStorage"));
 import{formatCurrency} from './ utility.js'
+
+
+export let  cart = JSON.parse(localStorage.getItem("EcomStorage"));
 
 if (!cart) {
     //if the cart is Empty the computer show this product as default.
@@ -29,7 +31,6 @@ export function vurnoStorage () {
     localStorage.setItem("EcomStorage", JSON.stringify(cart))
 }
 
-// localStorage.clear();
 
 
 
