@@ -1,7 +1,6 @@
 import {cart, productTaker,vurnoStorage} from './cart-page.js';
 import {productInfo} from './product-info.js'
-
-
+import{formatCurrency} from './ utility.js'
 
 
 //COMBINING ALL HTML  Or Viewer
@@ -122,7 +121,6 @@ ctaBtn.forEach((button) => {
     })
 
 });
-
 
 
 

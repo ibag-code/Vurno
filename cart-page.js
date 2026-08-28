@@ -1,32 +1,32 @@
-export let  cart = JSON.parse(localStorage.getItem("Ecom-Storage"));
+export let  cart = JSON.parse(localStorage.getItem("EcomStorage"));
+import{formatCurrency} from './ utility.js'
 
 if (!cart) {
     //if the cart is Empty the computer show this product as default.
-    cart = [{
-
-            // Saving the mockup data
-                productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
-                quantity: 1,
-            }, 
-            {
-                productId: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
-                quantity: 1,
-            },
-            {
-                productId: "54e0eccd-8f36-462b-b68a-8182611d9add",
-                quantity: 1,
-            }, 
-            {
-                productId: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
-                quantity: 1,
-            }];
+cart = [{
+        // Saving the mockup data
+            productId: "e43638ce-6aa0-4b85-b27f-e1d07eb678c6",
+            quantity: 1,
+            deliveryOption: "1",
+        }, 
+        {
+            productId: "8c9c52b5-5a19-4bcb-a5d1-158a74287c53",
+            quantity: 1,
+            deliveryOption: "2",
+        },
+        {
+            productId: "54e0eccd-8f36-462b-b68a-8182611d9add",
+            quantity: 1,
+            deliveryOption: "3",
+        }, 
+    ];
 
 }
 
 
 
 export function vurnoStorage () {
-    localStorage.setItem("Ecom-Storage", JSON.stringify(cart))
+    localStorage.setItem("EcomStorage", JSON.stringify(cart))
 }
 
 // localStorage.clear();
@@ -52,6 +52,7 @@ cart.forEach((item) => {
         cart.push({
             productId: dataproductId,
             quantity: selectedItem,
+            deliveryOption: "1"
         })
     }
 
